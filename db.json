@@ -2,13 +2,18 @@
   "posts": [
     {
       "id": 1,
-      "title": "Fourscore is not a score",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, repudiandae, facilis? Temporibus quos voluptatum fugiat corrupti soluta, porro ratione iusto nobis placeat dolores omnis, similique rerum eaque cumque dolorum quia."
+      "title": "This is the new post title",
+      "body": "blah blah blah"
     },
     {
       "id": 2,
-      "title": "I'm a really interesting post. READ ME!",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sapiente id adipisci officia ipsa cumque, facere necessitatibus delectus fuga aspernatur temporibus, illo blanditiis, sed eaque in amet eum alias? Molestiae."
+      "title": "This is the second article",
+      "body": "blah blah bleep dee bleep blah"
+    },
+    {
+      "id": 3,
+      "title": "third title",
+      "body": "blah blah"
     }
   ]
 }

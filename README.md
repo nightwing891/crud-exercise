@@ -10,4 +10,4 @@
 - Write protractor assertions for each of the four CRUD operations.
 
 ## Super Bonus Round
-- Examine the $resource library [here](http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/)
+- Examine the $resource library [here](http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/) and swap out the service methods you wrote for the original homework with the $resource library.

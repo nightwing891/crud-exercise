@@ -1,0 +1,11 @@
+.delete{
+	cursor: pointer;
+}
+
+.delete:hover{
+	color: #666;
+}
+
+section{
+	display: inline-block;
+}

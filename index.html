@@ -8,15 +8,57 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-		<style type="text/css"></style>
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body ng-controller="myCtrl">
-		<ul>
-			<li ng-repeat="article in articles">
-				<h3>{{article.title}}</h3>
-				<p>{{article.body}}</p>
-			</li>
-		</ul>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Articles Exercise</h1>
+				<p>Complete the service, and controller to allow your articles app to create, read, update, and destroy articles</p>
+			</div>
+
+			<section>
+				<h2>Create</h2>
+				<div class="input-group">
+					<label for="id">id:</label>
+					<input class="form-control" type="number" name="id" ng-model="newArticle.id">
+				</div>
+				<div class="input-group">
+					<label for="title">title:</label>
+					<input class="form-control" type="text" name="title" ng-model="newArticle.title">
+				</div>
+				<div class="input-group">
+					<label for="body">body</label>
+					<textarea class="form-control" name="body" ng-model="newArticle.body"></textarea>
+				</div>
+				<button class="btn btn-success">Create</button>
+			</section>
+
+			<section>
+				<h2>Update</h2>
+				<div class="input-group">
+					<label for="id">id:</label>
+					<input class="form-control" type="number" name="id" ng-model="updatedArticle.id">
+				</div>
+				<div class="input-group">
+					<label for="title">title:</label>
+					<input class="form-control" type="text" name="title" ng-model="updatedArticle.title">
+				</div>
+				<div class="input-group">
+					<label for="body">body</label>
+					<textarea class="form-control" name="body" ng-model="updatedArticle.body"></textarea>
+				</div>
+				<button class="btn btn-success">Update</button>
+			</section>
+
+			<div class="panel panel-default" ng-repeat="article in articles">
+				<div class="panel-body">
+					<h3>{{article.title}} <span style="float:right" class="delete glyphicon glyphicon-trash" ng-click="delete(article.id)"></span></h3>
+					<p>{{article.body}}</p>
+				</div>
+			</div>
+
+		</div
 	</body>
 	<script type="text/javascript" src="app.js"></script>
 </html>

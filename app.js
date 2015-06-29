@@ -22,7 +22,7 @@ app.controller('myCtrl', ['$scope', 'articles', function ($scope, articles) {
 	$scope.newArticle = {};
 
 	$scope.delete = function(id){
-		console.log(id)
+
 	};
 
 	$scope.update = function(id){

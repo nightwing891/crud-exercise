@@ -1,5 +1,8 @@
 # crud-exercise
 
+```json-server --watch db.json```
+```http-server .```
+
 - clone down the repo
 - The GET request is already written for you pointing at the JSON Server
 - There are already HTML elements to handle the creation and update of articles

@@ -5,11 +5,17 @@ app.service('articles', ['$http', function ($http) {
 		return $http.get('http://localhost:3000/posts')
 	}
 
-	this.deleteArticle = function...
+	this.deleteArticle = function(id){
+		return $http.delete('http://localhost:3000/posts/' + id);
+	}
 
-	this.updateArticle = function...
+	this.updateArticle = function(id, data){
+		return $http.put('http://localhost:3000/posts/' + id, data);
+	}
 
-	this.createArticle = function...
+	this.createArticle = function(data){
+		return $http.post('http://localhost:3000/posts/', data);
+	}
 }])
 
 app.controller('myCtrl', ['$scope', 'articles', function ($scope, articles) {
@@ -21,17 +27,21 @@ app.controller('myCtrl', ['$scope', 'articles', function ($scope, articles) {
 
 	$scope.newArticle = {};
 
-	$scope.delete = function(id){
-
+		$scope.delete = function(id){
+		articles.deleteArticle(id).success(function(response){
+			console.log(response)
+		})
 	};
 
 	$scope.update = function(id){
-
+		articles.updateArticle($scope.updatedArticle.id, $scope.updatedArticle).success(function(response){
+			console.log(response)
+		})
 		$scope.updateArticle = {};
 	}
 
 	$scope.create = function(){
-
+		articles.createArticle($scope.newArticle);
 		$scope.newArticle = {};
 	}
 }])

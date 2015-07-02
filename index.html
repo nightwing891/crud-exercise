@@ -31,7 +31,7 @@
 					<label for="body">body</label>
 					<textarea class="form-control" name="body" ng-model="newArticle.body"></textarea>
 				</div>
-				<button class="btn btn-success">Create</button>
+				<button class="btn btn-success" ng-click="create()">Create</button>
 			</section>
 		<!--Update -->
 			<section>
@@ -49,7 +49,7 @@
 					<label for="body">body</label>
 					<textarea class="form-control" name="body" ng-model="updatedArticle.body"></textarea>
 				</div>
-				<button class="btn btn-success">Update</button>
+				<button class="btn btn-success" ng-click="update()">Update</button>
 			</section>
 		<!--delete-->
 			<div class="panel panel-default" ng-repeat="article in articles">
